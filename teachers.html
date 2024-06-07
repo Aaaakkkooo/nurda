@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учителя</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        /* Шапка сайта */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #d4af37;
+            border-bottom: 2px solid #d4af37;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        /* Основной контент */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #282828;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d4af37;
+        }
+
+        .teachers-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .teacher {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 250px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .teacher img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .teacher .card-content {
+            padding: 15px;
+        }
+
+        .teacher .card-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #d4af37;
+        }
+
+        .teacher .card-content p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #e0e0e0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a:hover {
+            color: #d4af37;
+            transition: color 0.3s ease;
+        }
+        .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    opacity: 0.5; /* Прозрачность видео */
+}
+header, main, footer {
+    opacity: 0.8; /* Прозрачность элементов */
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="vid1.mp4" type="video/mp4">
+            <!-- Добавьте другие форматы видео, если это необходимо -->
+        </video>
+    </div>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="materials.html">Учебные материалы</a></li>
+                <li><a href="teachers.html">Учителя</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Наши учителя</h1>
+        <div class="teachers-container">
+            <div class="teacher">
+                <img src="https://i.ibb.co/GsCMgZ0/image.jpg" alt="Орыншайхова Галия Асхатовна">
+                <div class="card-content">
+                    <h4 class="card-title">Орыншайхова Галия Асхатовна</h4>
+                    <p><i class="fa-solid fa-address-book"></i> Заместитель директора по УМО</p>
+                    <p><i class="fa-solid fa-envelope"></i> galiyaaskhatovnao3@gmail.com</p>
+                </div>
+            </div>
+            <div class="teacher">
+                <img src="https://i.ibb.co/R9nTCKS/image.jpg" alt="Мәлікова Маржан Сабырқызы">
+                <div class="card-content">
+                    <h4 class="card-title">Мәлікова Маржан Сабырқызы</h4>
+                    <p><i class="fa-solid fa-address-book"></i> Заместитель директора по УР</p>
+                    <p><i class="fa-solid fa-envelope"></i> malikova_m@agpk.kz</p>
+                </div>
+            </div>
+            <div class="teacher">
+                <img src="https://i.ibb.co/ctWV0GV/image.jpg" alt="Саурбек Ұлжан Болатханқызы">
+                <div class="card-content">
+                    <h4 class="card-title">Саурбек Ұлжан Болатханқызы</h4>
+                    <p><i class="fa-solid fa-address-book"></i> Заведующий отделением «Информационные системы»</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Колледж. Все права защищены.</p>
+    </footer>
+</body>
+</html>

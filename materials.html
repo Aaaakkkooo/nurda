@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебные материалы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+       /* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent; /* Делаем фон прозрачным */
+    color: rgba(224, 224, 224, 0.8); /* Добавляем прозрачность к цвету текста */
+}
+
+/* Стили для шапки сайта */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.5); /* Добавляем прозрачность к фону шапки */
+    color: rgba(224, 224, 224, 0.8); /* Добавляем прозрачность к цвету текста */
+}
+
+header .logo,
+header nav ul li a {
+    color: rgba(224, 224, 224, 0.8); /* Добавляем прозрачность к цвету текста в шапке */
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0; /* Добавляем это свойство, чтобы убрать внешние отступы */
+}
+
+
+/* Стили для основного контента */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(40, 40, 40, 0.5); /* Добавляем прозрачность к фону основного контента */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    text-align: center;
+    color: rgba(212, 175, 55, 0.8); /* Добавляем прозрачность к цвету заголовков */
+}
+
+.materials-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.5); /* Добавляем прозрачность к фону секций с материалами */
+    border-radius: 10px;
+}
+
+.materials-section h2 {
+    margin-top: 0;
+    color: rgba(212, 175, 55, 0.8); /* Добавляем прозрачность к цвету заголовков */
+}
+
+.materials-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.materials-section ul li {
+    margin-bottom: 10px;
+}
+
+.materials-section ul li a {
+    color: rgba(212, 175, 55, 0.8); /* Добавляем прозрачность к цвету ссылок */
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    padding: 10px;
+    background-color: rgba(68, 68, 68, 0.8); /* Добавляем прозрачность к фону кнопок */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.materials-section ul li a:hover {
+    background-color: rgba(85, 85, 85, 0.8); /* Изменяем цвет кнопок при наведении с сохранением прозрачности */
+    color: #fff; /* Убираем прозрачность цвета при наведении */
+}
+
+/* Стили для подвала */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.5); /* Добавляем прозрачность к фону подвала */
+    color: rgba(224, 224, 224, 0.8); /* Добавляем прозрачность к цвету текста */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a:hover {
+    color: rgba(212, 175, 55, 0.8); /* Добавляем прозрачность к цвету ссылок при наведении */
+    transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    /* Дополнительные стили для разрешений шире 768px */
+    .materials-section ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .materials-section ul li {
+        flex: 1 1 calc(33.333% - 10px);
+        margin-bottom: 0;
+    }
+}
+
+/* Стили для видео-фона */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Чтобы видео было за всеми другими элементами */
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="vid1.mp4" type="video/mp4">
+            <!-- Добавьте другие форматы видео, если это необходимо -->
+        </video>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="materials.html">Учебные материалы</a></li>
+                <li><a href="teachers.html">Учителя</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Учебные материалы</h1>
+        <section class="materials-section">
+            <h2>Основы программирования</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/learn/python" target="_blank">Python для начинающих (Coursera)</a></li>
+                <li><a href="https://www.udacity.com/course/intro-to-programming-nanodegree--nd000" target="_blank">Введение в программирование (Udacity)</a></li>
+                <li><a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" target="_blank">CS50: Введение в информатику (edX)</a></li>
+            </ul>
+        </section>
+        <section class="materials-section">
+            <h2>Веб-разработка</h2>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">Адаптивный веб-дизайн (freeCodeCamp)</a></li>
+                <li><a href="https://www.codecademy.com/learn/paths/web-development" target="_blank">Путь веб-разработчика (Codecademy)</a></li>
+                <li><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank">Bootcamp веб-разработчика (Udemy)</a></li>
+            </ul>
+        </section>
+        <section class="materials-section">
+            <h2>Машинное обучение</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/learn/machine-learning" target="_blank">Машинное обучение (Coursera)</a></li>
+                <li><a href="https://www.udacity.com/course/intro-to-machine-learning-with-pytorch--ud188" target="_blank">Введение в машинное обучение с PyTorch (Udacity)</a></li>
+                <li><a href="https://www.edx.org/professional-certificate/ibm-applied-ai" target="_blank">Прикладной AI (edX)</a></li>
+            </ul>
+        </section>
+        <section class="materials-section">
+            <h2>Полезные сайты</h2>
+            <ul>
+                <li><a href="https://stackoverflow.com" target="_blank">Stack Overflow</a></li>
+                <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Колледж. Все права защищены.</p>
+    </footer>
+</body>
+</html>
